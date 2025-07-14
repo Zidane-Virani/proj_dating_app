@@ -1,7 +1,10 @@
 import React from "react"
+import LoginForm from "./LoginForm"
 
 export default function Messages(){
     return (
-        <div>LoginPage</div>
+        <div className="flex justify-center items-center vertical-center">
+            <LoginForm />
+        </div>
     )
 }
