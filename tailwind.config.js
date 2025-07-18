@@ -9,6 +9,9 @@ const config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "dark-gradient": "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)",
+      },
       fontFamily: {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],

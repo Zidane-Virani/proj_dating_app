@@ -5,7 +5,7 @@ import {RegisterSchema, registerSchema} from "@/lib/schemas/registerSchemas";
 import bcrypt from "bcryptjs";
 import {z} from "zod";
 import { ActionResult } from "@/types";
-import { User } from "@/generated/prisma";
+
 import { LoginSchema } from "@/lib/schemas/loginSchema";
 import { signIn, signOut } from "../../../auth"
 import { AuthError } from "next-auth";
@@ -40,7 +40,7 @@ export async function signOutUser(){
 }
 
 
-export async function registerUser(data: RegisterSchema): Promise<ActionResult<User>> {
+export async function registerUser(data: RegisterSchema): Promise<ActionResult<any>> {
     try{
         const validated = registerSchema.safeParse(data);
         if (!validated.success) {
