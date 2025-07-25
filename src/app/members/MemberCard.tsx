@@ -14,7 +14,7 @@ type Props = {
 };
 
 export default function MemberCard({ member, likeIds }: Props) {
-  const hasLiked = likeIds.includes(member.userid);
+  const hasLiked = Array.isArray(likeIds) && likeIds.includes(member.userid);
 
   const preventLinkAction = (e: React.MouseEvent) => {
     e.preventDefault();
